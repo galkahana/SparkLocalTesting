@@ -19,10 +19,10 @@ def spark():
 
 
 @fixture
-def jobs_db(spark: SparkSession):
-    yield from SparkTester(spark).create_db("jobs")
+def subjects_db(spark: SparkSession):
+    yield from SparkTester(spark).create_db("subjects")
 
 
 @fixture
-def interactions_db(spark: SparkSession):
-    yield from SparkTester(spark).create_db("interactions")
+def actions_db(spark: SparkSession):
+    yield from SparkTester(spark).create_db("actions")
